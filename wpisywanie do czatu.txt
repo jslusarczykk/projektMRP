@@ -1,0 +1,42 @@
+Stwórz swój autorski program obliczający zapotrzebowanie zgodne z algorytmem MRP i generujący tabelkę do każdego poziomu. Schemat tabelki podam poniżej.
+
+ Wymagania: Technologia Python. Obsługa 3 poziomów. Mój pomysł na projekt to MRP dla zakładu krawieckiego szyjącego garnitury. 
+
+Algorytm ma zwracać wszystkie tabelki i informację jaki jest łączny koszt garniturów i czas potrzebny na ich przygotowanie, czyli p i t
+
+struktura tabelki:
+tydzień
+potrzeby brutto
+wstępny zapas
+potrzeby netto
+zaplanowany odbiór
+dla kazdego poziomu
+
+Objaśnienia oznaczeń stosowanych w tabelkach: 
+poziom 0 - garnitury
+g - liczba garniturów do zrobienia
+x - liczba garniturów w zapasie
+garnitury mają być gotowe na 8 tydz, potrzeby netto to g-x
+poziom 1 - guziki
+gz - początkowa liczba guzików
+g*4 - tyle sztuk guzików ma być gotowe w 4 tygodniu, g*10 - łączna liczba guzików, gotowa na 6 tydzień
+r - liczba rękawów
+poziom 2 - korpus 
+k - wstępny zapas korpusów
+g/2 - ilosc korpusów potrzebna w 3 tygodniu 
+korpusy maja byc gotowe na 3 tydzien ma byc ich g
+poziom 2 - rękawy
+r - wstępny zapas 
+g - ilosc r potrzebna w 3 tygodniu 
+g*2 - całkowita ilosc r potrzebna w 5 tygodniu 
+poziom 3 - wełna 
+wełna jest potrzebna w 1 tygodniu. 
+w - wstępny zapas 
+2g-w - łączna ilość wełny netto 
+poziom 3 - nić 
+n - wstępny zapas nici
+g*500 - łączna ilosc nici potrzebna brutto
+poziom 3 - waterunek 
+waterunek jest potrzebny w 1 tygodniu.
+w1 - wstępny zapas wateruneku
+g*2 - łączna ilosc waterunku
